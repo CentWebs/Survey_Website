@@ -5,7 +5,7 @@ FileName : app.js
 */
 let mongoose = require ('mongoose');
 
-//create a model class
+//create a model class for surveys
 let surveyModel = mongoose.Schema({
 title: String,
 subtitle: String,
