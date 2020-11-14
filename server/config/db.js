@@ -3,7 +3,7 @@ Author: CentWebs
 Date: 11-11-2020
 FileName : db.js
 
-Where to connect from
+Where to connect from (local,hosted db)
 
 */
 
