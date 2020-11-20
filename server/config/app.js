@@ -15,14 +15,13 @@ let logger = require('morgan');
 // modules for authentication
 let session = require('express-session');
 let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
 
 //let passportJWT = require('passport-jwt');
 //let JWTStrategy = passportJWT.Strategy;
 //let ExtractJWT = passportJWT.ExtractJwt;
-
-let passportLocal = require('passport-local');
-let localStrategy = passportLocal.Strategy;
-let flash = require('connect-flash');
 
 //database setup
 
@@ -72,8 +71,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // passport user configuration
+ 
+//create user model instance
+let userModel = require('../models/user');
+let User = userModel.User;
 
-// create a User Model Instance
+// create a survey Model Instance
 let surveyModel = require('../models/survey');
 let Survey = surveyModel.Survey;
 
@@ -82,8 +85,8 @@ let Survey = surveyModel.Survey;
 //passport.use(User.createStrategy());
 
 // serialize and deserialize the User info
-//passport.serializeUser(User.serializeUser());
-//passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 
 
