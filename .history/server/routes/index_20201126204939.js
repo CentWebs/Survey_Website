@@ -32,7 +32,6 @@ router.post('/register', indexController.processRegisterPage);
 /* GET to perform USER LOGOUT*/
 router.get('/logout', indexController.performLogout);
 
-/*
 //GET Surevey page. 
 router.get('/home', function(req, res, next) {
 res.render('survey-list', { title: 'Current Survey List' });
@@ -42,6 +41,5 @@ res.render('survey-list', { title: 'Current Survey List' });
 router.get('/survey', function(req, res, next) {
 res.render('survey', { title: 'Survey' });
 });
-*/
 
 module.exports = router;

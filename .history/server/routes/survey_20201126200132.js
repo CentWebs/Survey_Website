@@ -17,7 +17,6 @@ let mongoose = require('mongoose');
 let passport = require('passport');
 
 let surveyController = require('../controllers/survey')
-let UserController = require('../controllers/index')
 
 //helper function to guard purposes
 function requireAuth(req,res,next)
@@ -25,7 +24,7 @@ function requireAuth(req,res,next)
     //check if user is logged in
     if(!req.isAuthenticated())
     {
-        return res.redirect('auth/login');
+        return res.redirect('/login');
     }
     next();
 }
@@ -34,7 +33,7 @@ function requireAuth(req,res,next)
 router.get('/', surveyController.displaySurveyList);
 
 /* GET Route for displaying the Add page - CREATE Operation */
-router.get('/add', surveyController.displayAddPage);
+router.get('/add',requireAuth, surveyController.displayAddPage);
 
 /* POST Route for processing the Add page - CREATE Operation */
 router.post('/add',requireAuth, surveyController.processAddPage);

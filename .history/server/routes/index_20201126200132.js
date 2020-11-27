@@ -12,10 +12,6 @@ let indexController = require('../controllers/index')
 router.get('/', function(req, res, next) {
   res.render('home', { title: 'Welcome survey' });
 });
-/* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('home', { title: 'Welcome survey' });
-});
 
 /* GET Route for displaying the LOGIN page*/
 router.get('/login ', indexController.displayLoginPage);
@@ -32,16 +28,15 @@ router.post('/register', indexController.processRegisterPage);
 /* GET to perform USER LOGOUT*/
 router.get('/logout', indexController.performLogout);
 
-/*
-//GET Surevey page. 
-router.get('/home', function(req, res, next) {
-res.render('survey-list', { title: 'Current Survey List' });
-});
 
-//GET Surevey page. 
-router.get('/survey', function(req, res, next) {
-res.render('survey', { title: 'Survey' });
-});
-*/
+/* GET Surevey page. */
+//router.get('/home', function(req, res, next) {
+//  res.render('survey-list', { title: 'Current Survey List' });
+//});
+
+/* GET Surevey page. */
+//router.get('/survey', function(req, res, next) {
+//  res.render('survey', { title: 'Survey' });
+//});
 
 module.exports = router;

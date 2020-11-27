@@ -17,7 +17,6 @@ let mongoose = require('mongoose');
 let passport = require('passport');
 
 let surveyController = require('../controllers/survey')
-let UserController = require('../controllers/index')
 
 //helper function to guard purposes
 function requireAuth(req,res,next)
