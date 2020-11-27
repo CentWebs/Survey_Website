@@ -10,5 +10,5 @@ Where to connect from (local,hosted db)
 module.exports =
 {
    //"URI": "mongodb://localhost/contact"
-   "URI": "mongodb+srv://christine:uueAlVIKiJ44sLKJ@mongodbserver.u22hw.mongodb.net/contact?retryWrites=true&w=majority"
+   "URI":"mongodb+srv://botjasper:wUL0z1sWDV8ei4vF@mongodbserver.x2t68.azure.mongodb.net/express_portfolio?retryWrites=true&w=majority"
 }
