@@ -8,10 +8,6 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
-//Enable JWT
-let jwt = require('jsonwebtoken');
-let DB = require('../config/db');
-
 //create user model isntance
 let userModel = require('../models/user');
 let User = userModel.User; //alias
@@ -57,17 +53,6 @@ module.exports.processLoginPage = (req,res,next)=> {
             {
                 return next(err);
             }
-            const payload = 
-            {
-                id: user._id,
-                displayName: user.displayName,
-                username: user.username,
-                email: user.email
-            }
-            
-            const authToken = jwt.sign(payload, DB.Secret, {
-                expiresIn: 604800 // 1 week
-            });
             return res.redirect('/survey-list');
         });
     })(req,res,next);
