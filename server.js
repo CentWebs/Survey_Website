@@ -12,6 +12,7 @@ FileName : app.js
 var app = require('./server/config/app');
 var debug = require('debug')('week-4:server');
 var http = require('http');
+var test = "test"
 
 /**
  * Get port from environment and store in Express.
