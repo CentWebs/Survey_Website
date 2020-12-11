@@ -18,5 +18,5 @@ enterQuestion3: String
     collection: "survey"
 }) ;
 
-
+module.exports = mongoose.model('Survey',surveyModel);
 module.exports = mongoose.model('Survey',surveyModel);
