@@ -1,0 +1,71 @@
+<!--
+Author: CentWebs
+Date: 11-11-2020
+
+-->
+
+
+<!--Main nav-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+  <a class="navbar-brand" href="#" >
+    <img src="/Assets/images/logo.png" width="200" height="200" alt="Logo">
+  </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="jumbotron bg-dark text-light ">
+        <p class="lead">TRENDING COMPANIES REVIEW SURVEY</p>
+       
+      </div>
+      <ul class="navbar-nav ml-auto">
+
+
+        <% if (title == "Survey List") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/survey-list"><i class="fas fa-lg fa-igloo"></i> Show Surveys List</a>
+        </li>
+
+
+        <% if (title == "Add Survey") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/survey-list/add"><i class="fas fa-lg fa-question-circle"></i>Create Survey </a>
+        </li>
+
+          <% if (title == "Login") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/login"><i class="fas fa-lg fa-question-circle"></i>Login </a>
+        </li>
+
+          <% if (title == "Register") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/register"><i class="fas fa-lg fa-question-circle"></i>Register </a>
+        </li>
+         <% if (title == "Logout") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/logout"><i class="fas fa-lg fa-question-circle"></i>Logout </a>
+        </li>
+
+
+      
+    </div>
+  </nav>
