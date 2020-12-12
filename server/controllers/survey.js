@@ -15,6 +15,7 @@ let mongoose = require('mongoose');
 let Survey = require('../models/survey');
 
 module.exports.displaySurveyList = (req, res, next) => {
+    // This will find the Survey from the Database
     Survey.find((err, surveyList) => {
         if(err)
         {
