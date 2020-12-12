@@ -1,0 +1,59 @@
+<!--
+Author: CentWebs
+Date: 11-11-2020
+
+-->
+
+
+<!--Main nav-->
+   <!--Main Nav here-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Trending Companies Review Survey</a>
+    <img src="/Assets/images/logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+
+   <% if (title == "Home") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/home"><i class="fas fa-home"></i> Home</a>
+        </li>
+
+
+        <% if (title == "Survey List") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/survey-list"><i class="fas fa-poll"></i> Show Surveys List</a>
+        </li>
+
+
+   
+        <% if (title == "Add Survey") { %>
+        <li class="nav-item active ">
+          <% } else { %>
+        <li class="nav-item"></li>
+        <% } %>
+        <a class="nav-link" href="/survey-list/add"><i class="far fa-list-alt"></i> Create Survey </a>
+        </li>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+        <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link">
+            <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+        <% } %>
+      </ul>
+
+    </div>
+  </nav>
